@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>To create HTML dynamic pages</title>
+    <style>
+        body {
+            text-align: center;
+        }
+ 
+        p {
+            color: green;
+        }
+    </style>
+</head>
+ 
+<body>
+    <h1>Dynamically changing content</h1>
+    <h3>Enter Your Name</h3>
+    <input id="name" type="text">
+    <button type="button" onclick="EnterName()">Submit</button>
+    <p id="demo"></p>
+    <script>
+        function EnterName() {
+            let user = document.getElementById("name").value;
+ 
+            document.getElementById("demo").innerHTML =
+                "Welcome to the Cult " + user;
+        }
+    </script>
+</body>
+<p><a href="(WebDev2) index.html">Home page</a></p>
+</html>
+
+
+
