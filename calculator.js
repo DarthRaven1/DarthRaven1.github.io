@@ -41,3 +41,24 @@ function generateRandomNumber() {
   
     document.getElementById("result").textContent = "Result: " + result;
   }
+
+  let total = 0;
+
+function addNumber() {
+  const input = parseFloat(document.getElementById("numberInput").value);
+
+  if (isNaN(input)) {
+    alert("Please enter a valid number.");
+    return;
+  }
+
+  if (input === -1) {
+    document.getElementById("total").textContent = "Total: " + total;
+    total = 0;
+    document.getElementById("numberInput").value = "";
+  } else {
+    total += input;
+    document.getElementById("total").textContent = "Total: " + total;
+    document.getElementById("numberInput").value = "";
+  }
+}
