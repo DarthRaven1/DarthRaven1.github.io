@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Not-So-Simple Calculator</title>
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #000;
+}
+
+#calculator {
+  background-color: #000;
+  border-radius: 20px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#display {
+  background-color: transparent;
+  color: white;
+  text-align: right;
+  padding: 20px 0;
+  font-size: 48px;
+  border: 1px solid gray; /* Added gray border */
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  outline: none;
+  border-radius: 5px; /* Optional: adds rounded corners to the display */
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.button {
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.button.operator {
+  background-color: #ff9500;
+}
+
+.button.function {
+  background-color: #a9a9a9;
+  color: black;
+}
+.button.zero {
+    width: 130px;
+    border-radius: 30px;
+    justify-content: left;
+    padding-left: 25px;
+}
+
+#display {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+#display::-webkit-outer-spin-button,
+#display::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+</style>
+</head>
+<body>
+
+<div id="calculator">
+  <div id="display">0</div>
+  <div class="button-row">
+    <button class="button function" onclick="clearDisplay()">AC</button>
+    <button class="button function" onclick="toggleSign()">+/-</button>
+    <button class="button function" onclick="calculatePercentage()">%</button>
+    <button class="button operator" onclick="appendOperator('/')">÷</button>
+  </div>
+  <div class="button-row">
+    <button class="button" onclick="appendNumber('7')">7</button>
+    <button class="button" onclick="appendNumber('8')">8</button>
+    <button class="button" onclick="appendNumber('9')">9</button>
+    <button class="button operator" onclick="appendOperator('*')">×</button>
+  </div>
+  <div class="button-row">
+    <button class="button" onclick="appendNumber('4')">4</button>
+    <button class="button" onclick="appendNumber('5')">5</button>
+    <button class="button" onclick="appendNumber('6')">6</button>
+    <button class="button operator" onclick="appendOperator('-')">-</button>
+  </div>
+  <div class="button-row">
+    <button class="button" onclick="appendNumber('1')">1</button>
+    <button class="button" onclick="appendNumber('2')">2</button>
+    <button class="button" onclick="appendNumber('3')">3</button>
+    <button class="button operator" onclick="appendOperator('+')">+</button>
+  </div>
+  <div class="button-row">
+    <button class="button zero" onclick="appendNumber('0')">0</button>
+    <button class="button" onclick="appendNumber('.')">.</button>
+    <button class="button operator" onclick="calculateResult()">=</button>
+  </div>
+</div>
+
+<script src="Not-So-Simple Calculator.js">
+</script>
+
+</body>
+</html>
