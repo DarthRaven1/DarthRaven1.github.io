@@ -3,50 +3,80 @@
 <!DOCTYPE html>
 
 <html>
-
 <head>
-  
 <title>My Site</title>
-
 <style>
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
     body {
-      background-image: 
-linear-gradient(to right, RGB(255, 102, 0), RGB(125, 249, 255), RGB(118, 185, 0)); 
-      
+        background: linear-gradient(to right, RGB(255, 102, 0), RGB(125, 249, 255), RGB(118, 185, 0));
+        background-size: 200% 200%;
+        animation: gradient 10s ease infinite;
     }
-    
+
     h1 {
-      font: italic 1.2rem "Fira Sans", serif;
-      color: rgb(0, 0, 0);
-      
+        font: italic 1.2rem "Fira Sans", serif;
+        color: rgb(0, 0, 0);
+        transition: color 0.3s ease;
     }
+
+    h1:hover {
+        color: rgb(38, 0, 255);
+    }
+
     h2 {
-      font: caption;
-      color: rgb(0, 0, 0);
-      
+        font: caption;
+        color: rgb(0, 0, 0);
+        transition: color 0.3s ease;
     }
+
+    h2:hover {
+        color: rgb(255, 0, 0);
+    }
+
     h3 {
-      font: sans-serif;
-      color: rgb(0, 0, 0);
-      
+        font: sans-serif;
+        color: rgb(0, 0, 0);
     }
+
+    h3:hover {
+        color: rgba(195, 0, 255, 0.705);
+    }
+
     h4 {
-      font-family: system-ui;
-      color: rgb(0, 0, 0);
-      
+        font-family: system-ui;
+        color: rgb(0, 0, 0);
     }
+
+    h4:hover {
+        color: rgb(255, 0, 0);
+    }
+
     p {
-      font-family: system-ui;
-      color: rgb(0, 0, 0);
-      
+        font-family: system-ui;
+        color: rgb(0, 0, 0);
     }
-    
+
+    p:hover {
+        color: rgba(195, 0, 255, 0.705);
+    }
+
     div {
-      background-color: rgb(255, 230, 0);
-      width: 300px;
-      border: 15px solid rgb(2, 0, 128);
-      padding: 50px;
-      margin: 20px;
+        background-color: rgb(255, 230, 0);
+        width: 300px;
+        border: 15px solid rgb(2, 0, 128);
+        padding: 50px;
+        margin: 20px;
     }
 
     .positioned {
@@ -54,16 +84,17 @@ linear-gradient(to right, RGB(255, 102, 0), RGB(125, 249, 255), RGB(118, 185, 0)
         background: rgba(255, 255, 0, 0);
         bottom: 30px;
         left: 100px;
-      }
-    </style>
-
+    }
+</style>
 </head>
-
 <body>
+    <h1>Welcome to My Site</h1>
+    <h2>Enjoy the cool effects!</h2>
+</body>
+</html>
 
 
     
-<h1>Welcome to my website.</h>
     
     <br />
  <div><h2>Recently, I have been looking into building a PC, and I've been looking at some pretty powerful parts. </h2>
@@ -76,25 +107,25 @@ linear-gradient(to right, RGB(255, 102, 0), RGB(125, 249, 255), RGB(118, 185, 0)
 <p><a href="https://www.amazon.com/NVIDIA-GeForce-Founders-Graphics-GDDR6X/dp/B0BJFRT43X/ref=sr_1_1?crid=2W0KG7ZTLP7FJ&dib=eyJ2IjoiMSJ9.FvtyHB-Dk_p8c8rTn9aU37XJ1taejz3FXa2KNC0gf3bDlUtbbC6rH-tnL5iFa_YerrnG43nbrq7W_E2w4_M6iYeRPqmxz0GMGoor_7aimlp6KfhBON27XVXIQSCL9z3nuWia-uQbzuhoayKwm2JA995lOa4Fa2SUOT7Y2BTF7vlSTwIkCIKlT6rv56N6SYBglz-rxAlwo1nI5ap9x1Iimuw8ZztIrcsQYc5Glq3U9dE.4G9ljS937eDUlxq9jmOnw2TR26hN8L2rC6rOBm5mhzI&dib_tag=se&keywords=vipera+nvidia+geforce+rtx+4090+founders+edition+graphic+card&qid=1725999042&sprefix=nvidia+rtx+4090+founders+edition%2Caps%2C276&sr=8-1">Amazon</a></p>
 
 <br />
-<!-- For some reason this link doesn't work (yet) --> 
+ 
 <h4>I also have a list of all the parts on my Lists page below:</h4> 
 <p><a href="lists%20webpage.html">Lists page</a></p>
 
 <br />
 
-Here's my links page:  <!-- For some reason this link doesn't work (yet) --> 
+<p>Here's my links page:</p>   
 <p><a href="links.html">Links page</a></p>
 
 <br />
 
-Here's my About page:
+<p>Here's my About page:</p>
 <p><a href="about.html">About</a></p>
 </div>
 <!-- Notice that the tag for a line break below is not paired and has a slightly different structure than the other paired tags. -->
 
 <br />
 
-<p class="positioned"> up a chair and enjoy browsing my site!</p>
+<p class="positioned"> Pull up a chair and enjoy browsing my site!</p>
 
 </body>
 
