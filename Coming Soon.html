@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Project Index.html">Home</a></li>
+                <li><a href="Coming Soon.html">Mini-Game Challenge</a></li>
+                <li><a href="poll.html">Poll</a></li>
+                <li><a href="Coming Soon.html">Share Your Thoughts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .stamp {
+        color: #e53e3e; /* Keep it red */
+        font-size: 3rem;  /* Make it bigger */
+        font-weight: bold;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        transform: rotate(-30deg);
+        opacity: 0.5; /* Make it semi-transparent */
+        position: absolute;
+        top: 50%; /* Center it */
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-30deg);
+        z-index: 0; /* Send it to the background */
+        text-shadow: 0.125rem 0.125rem 0 #c53030;
+        font-family: 'Press Start 2P', cursive;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+      .coming-soon-banner {
+        background-color: rgba(255, 255, 255, 0.8); /* Slightly more opaque */
+        position: relative; /* Needed for z-index to work on sibling */
+        z-index: 1; /* Bring the banner to the front */
+      }
+      .container {
+        position: relative; /* Make the container relative */
+      }
+    </style>
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+    <div class="container w-full max-w-md bg-white rounded-lg shadow-md p-6">
+        <div class="stamp">Under Construction</div>
+        <h1 class="text-2xl font-semibold text-gray-800 mb-4 text-center coming-soon-banner">Coming Soon!</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Poll</h1>
+        <nav>
+            <ul>
+                <li><a href="Project Index.html">Home</a></li>
+                <li><a href="Coming Soon.html">Mini-Game Challenge</a></li>
+                <li><a href="poll.html">Poll</a></li>
+                <li><a href="Coming Soon.html">Share Your Thoughts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="poll-area">
+            <h2 id="poll-question"></h2>
+            <div id="poll-options"></div>
+            <button id="submit-poll">Submit Answer</button>
+            <div id="results-container" style="display: none;">
+                <h3>Poll Results</h3>
+                <canvas id="results-chart"></canvas>
+                <p id="results-text"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Project</p>
+    </footer>
+
+    <script src="poll.js"></script>
+</body>
+</html>
